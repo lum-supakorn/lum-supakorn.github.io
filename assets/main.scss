@@ -4,18 +4,18 @@
 
 @import "minima";
 
-.post-summary {
-	background-color: #f2f8ff;
-    padding: 15px;
-    border-radius: 5px;
-    margin: 20px 0px;
-    border: solid 1px #c1ddff;
-}
-
 .katex {
 	overflow-y: hidden;
 }
 
 img[alt=Lum] {
 	width: 200px;
+}
+
+.post-blue {
+	background-color: #f2f8ff;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0px;
+    border: solid 1px #c1ddff;
 }
