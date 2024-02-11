@@ -19,7 +19,7 @@ where $$\bm{\phi}$$ is a vector of unknown scalars, each defined at the position
 
 ## Scalar Transport Equation
 
-The equation we are working with is the steady-state scalar transport (convection-diffusion) equation with no sources. The equation is integrated over an arbitrary volume (cell), and the divergence theorem was applied to yield surface integrals:
+The equation we are working with is the steady-state scalar transport (convection-diffusion) equation with no sources. The equation is integrated over an arbitrary volume (cell), and the divergence theorem is applied to yield surface integrals:
 
 $$ \int_S\rho\phi\textbf{v}\cdot \textbf{n}\mathrm{d}S = \int_S \Gamma \nabla \phi\cdot\textbf{n}\mathrm{d}S $$
 
