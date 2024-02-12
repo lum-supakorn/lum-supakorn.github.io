@@ -5,3 +5,5 @@ _site
 vendor
 /_posts/.vscode/
 desktop.ini
+Gemfile.lock
+.debris/
