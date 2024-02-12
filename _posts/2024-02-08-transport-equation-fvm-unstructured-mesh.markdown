@@ -256,16 +256,18 @@ $$
 
 Its contribution to the linear system:
 $$
-\textbf{A}(i,i) \mathrel{+}= -\frac{\Gamma S_k}{|\bm{r}_{\mathrm{N}'_k} - \bm{r}_{\mathrm{P'}}|}
+\textbf{A}(i,i) \mathrel{+}= \frac{\Gamma S_k}{|\bm{r}_{\mathrm{N}'_k} - \bm{r}_{\mathrm{P'}}|}
 $$
 
 $$
-\textbf{A}(i,j) \mathrel{+}= \frac{\Gamma S_k}{|\bm{r}_{\mathrm{N}'_k} - \bm{r}_{\mathrm{P'}}|}
+\textbf{A}(i,j) \mathrel{+}= -\frac{\Gamma S_k}{|\bm{r}_{\mathrm{N}'_k} - \bm{r}_{\mathrm{P'}}|}
 $$
 
 $$
-\textbf{b}(i) \mathrel{+}= -\frac{\Gamma S_k\{(\nabla \phi)_{\mathrm{N}_k} \cdot (\textbf{r}_{\mathrm{N}'_k} - \textbf{r}_{\mathrm{N}_k}) - (\nabla \phi)_{\mathrm{P}} \cdot (\textbf{r}_{\mathrm{P'}} - \textbf{r}_{\mathrm{P}})\}}{|\bm{r}_{\mathrm{N}'_k} - \bm{r}_{\mathrm{P'}}|}
+\textbf{b}(i) \mathrel{+}= \frac{\Gamma S_k\{(\nabla \phi)_{\mathrm{N}_k} \cdot (\textbf{r}_{\mathrm{N}'_k} - \textbf{r}_{\mathrm{N}_k}) - (\nabla \phi)_{\mathrm{P}} \cdot (\textbf{r}_{\mathrm{P'}} - \textbf{r}_{\mathrm{P}})\}}{|\bm{r}_{\mathrm{N}'_k} - \bm{r}_{\mathrm{P'}}|}
 $$
+
+<i>Note that the signs of the contribution from the diffusion terms are flipped because the total diffusion flux is being subtracted from the total convection flux in the transport equation.</i>
 </div>
 
 # Diffusion Term: Dirichlet Boundary Condition
@@ -310,7 +312,7 @@ $$
 $$
 
 $$
-\textbf{b}(i) \mathrel{+}= -\left\{\frac{\Gamma S_k}{|\bm{r}_k - \bm{r}_{\mathrm{P'}}|}\right\}\phi_k + \frac{\Gamma S_k\{(\nabla \phi)_{\mathrm{P}} \cdot (\textbf{r}_{\mathrm{P'}} - \textbf{r}_{\mathrm{P}})\}}{|\bm{r}_k - \bm{r}_{\mathrm{P'}}|}
+\textbf{b}(i) \mathrel{+}= \left\{\frac{\Gamma S_k}{|\bm{r}_k - \bm{r}_{\mathrm{P'}}|}\right\}\phi_k - \frac{\Gamma S_k\{(\nabla \phi)_{\mathrm{P}} \cdot (\textbf{r}_{\mathrm{P'}} - \textbf{r}_{\mathrm{P}})\}}{|\bm{r}_k - \bm{r}_{\mathrm{P'}}|}
 $$
 </div>
 
