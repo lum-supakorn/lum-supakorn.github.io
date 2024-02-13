@@ -111,7 +111,7 @@ $$
 
 The second term describes the change in $$\phi_k$$ as we move from $$\bm{r}_{k'}$$ to $$\bm{r}_k$$ If information on $$\nabla \phi$$ is available at the center of each cell, $$(\nabla \phi)_{k'}$$ can be obtained with linear interpolation in the same manner as $$\phi_{k'}$$. Since $$\nabla \phi$$ depends on $$\phi$$ on each cell and vice versa, an iterative method is needed to obtain both. 
 
-One possible way is to first omit this correction altogether on the first iteration, construct the linear system without this correction, solve for $$\bm{\phi}$$, determine $$\nabla \phi$$, apply the correction, and repeat until convergence. At iteration $$i$$, the correction calculated from the scalars of the previous iteration $$i-1$$ is used. This is called *deferred correction*¹.
+One possible way is to first omit this correction altogether on the first iteration, construct the linear system without this correction, solve for $$\bm{\phi}$$, determine $$\nabla \phi$$, apply the correction, and repeat until convergence. At iteration $$i$$, the correction calculated from the scalars of the previous iteration $$i-1$$ is used. This is called *deferred correction*.
 
 <div class="post-blue">
 The convection flux for internal faces is thus:
