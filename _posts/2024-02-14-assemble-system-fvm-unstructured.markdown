@@ -26,13 +26,14 @@ $$
 which is the scalar transport equation written with a sum of fluxes in and out of each cell, $$F^{\mathrm{c}} - F^{\mathrm{d}} = 0$$. Constructing the linear system is a matter of correctly calculating the coefficients $$a$$ and the constant terms and putting them in the right places.
 
 ## Algorithm
-Suppose that we are working with a 2D triangular mesh. In this mesh, an internal cell has exactly 3 neighbors. A boundary cell has at least one and at most two neighbor cells. We loop through the cell arrays and construct the equations cell-by-cell. The algorithm below assumes that $$\nabla \phi$$ is available. If it's not, we can first set it to zero.
+Suppose that we are working with a 2D triangular mesh. In this mesh, an internal cell has exactly 3 neighbors. A boundary cell has at least one and at most two neighbor cells. We loop through the cell arrays and construct the equations cell-by-cell. The algorithm below assumes that $$\nabla \phi$$ is available. If it's not, we can first set it to zero. Also, the indices here are zero-based.
 
 <div class="post-box green">
 <b>Assembly algorithm:</b><br>
-Zero-initialize matrix \(\textbf{A}\) and vector \(\textbf{b}\)<br>
-For each cell \(i\):<br>
-<img src="/images/indent.svg">For each of its faces \(k\):<br>
+\(n \leftarrow\) number of cells<br>
+Zero-initialize matrix \(\textbf{A}_{n \times n}\) and vector \(\textbf{b}_{n \times 1}\)<br>
+For each cell \(i = 0 \rightarrow n-1\):<br>
+<img src="/images/indent.svg">For each of its faces \(k = 0 \rightarrow 3\):<br>
 <img src="/images/indent2.svg">If it's an internal face:<br>
 <img src="/images/indent3.svg"><span class="comment">Determine the neighbor cell index</span><br>
 <img src="/images/indent3.svg">\(j \leftarrow\) cell neighbor index associated to face \(k\)<br>
