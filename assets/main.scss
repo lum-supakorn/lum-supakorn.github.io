@@ -4,8 +4,13 @@
 
 @import "minima";
 
-.katex {
-	overflow-y: hidden;
+.katex-html {
+	overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.katex-html .tag {
+	margin-right: 10px;
 }
 
 img[alt=Lum] {
