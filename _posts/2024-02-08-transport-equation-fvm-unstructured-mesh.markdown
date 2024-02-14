@@ -113,7 +113,7 @@ The second term describes the change in $$\phi_k$$ as we move from $$\bm{r}_{k'}
 
 One possible way is to first omit this correction altogether on the first iteration, construct the linear system without this correction, solve for $$\bm{\phi}$$, determine $$\nabla \phi$$, apply the correction, and repeat until convergence. At iteration $$i$$, the correction calculated from the scalars of the previous iteration $$i-1$$ is used. This is called *deferred correction*.
 
-<div class="post-blue">
+<div class="post-box blue">
 The convection flux for internal faces is thus:
 
 $$
@@ -143,7 +143,7 @@ $$
 # Convection Term: Dirichlet Boundary Condition
 If a Dirichlet boundary condition is imposed on a face, the expression for $$\phi_k$$ is quite simple: it is the value that the boundary condition specifies. Be careful, though. Its value must be calculated at the midpoint of the face. Because $$\phi_k$$ is known, $$F^{\mathrm{c}}_k$$ does not contain any unknown and is readily available. Therefore, it can be moved to $$\textbf{b}$$.
 
-<div class="post-blue">
+<div class="post-box blue">
 The convection flux for Dirichlet faces is thus:
 $$
 F^{\mathrm{c}}_k = \rho \phi_k \textbf{v}_k \cdot \textbf{S}_k
@@ -163,7 +163,7 @@ $$
 \phi_k \approx \phi_{\mathrm{P}}
 $$
 
-<div class="post-blue">
+<div class="post-box blue">
 The convection flux for Neumann faces is thus:
 $$
 F^{\mathrm{c}}_k = \rho \phi_k \textbf{v}_k \cdot \textbf{S}_k \approx \rho \phi_{\mathrm{P}} \textbf{v}_k \cdot \textbf{S}_k
@@ -242,7 +242,7 @@ $$
 \textbf{r}_{\mathrm{N}'_k} = \textbf{r}_k + \beta\textbf{n}
 $$
 
-<div class="post-blue">
+<div class="post-box blue">
 The diffusion flux for internal faces is thus:
 
 $$
@@ -295,7 +295,7 @@ $$
 \textbf{r}_{\mathrm{P'}} = \textbf{r}_k - \{(\textbf{r}_k - \textbf{r}_{\mathrm{P}}) \cdot \textbf{n}\}\textbf{n}
 $$
 
-<div class="post-blue">
+<div class="post-box blue">
 The diffusion flux for Dirichlet faces is thus:
 $$
 F^{\mathrm{d}}_k = \Gamma \left\{\frac{\phi_k-\phi_{\mathrm{P}}}{|\bm{r}_k - \bm{r}_{\mathrm{P'}}|} - \frac{(\nabla \phi)_{\mathrm{P}} \cdot (\textbf{r}_{\mathrm{P'}} - \textbf{r}_{\mathrm{P}})}{|\bm{r}_k - \bm{r}_{\mathrm{P'}}|}\right\} S_k
@@ -329,7 +329,7 @@ $$
 \frac{\partial\phi_k}{\partial \textbf{n}} = -\frac{\partial \phi_k}{\partial \hat{\textbf{y}}} = -\frac{\partial \phi_k}{\partial y} = 0 \text{ (bottom)}
 $$
 
-<div class="post-blue">
+<div class="post-box blue">
 The diffusion flux for Neumann faces is thus:
 $$
 F^{\mathrm{d}}_k = 0
