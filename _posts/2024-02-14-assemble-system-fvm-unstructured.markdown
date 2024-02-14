@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Assembling Linear System of Unstructured Finite-Volume Discretization"
+title:  "Assembling Linear System from Unstructured Finite-Volume Discretization"
 date:   2024-02-14 11:50:00 +0700
 categories: cfd
 ---
