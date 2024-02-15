@@ -64,7 +64,6 @@ For each cell \(i = 0 \rightarrow n-1\):<br>
 <img src="/images/indent4.svg"><span class="comment">Store convection contribution</span><br>
 <img src="/images/indent4.svg">\(\textbf{A}(i,i) \mathrel{+}= \rho\textbf{v}_k \cdot \textbf{S}_k\)<br>
 <img src="/images/indent4.svg"><span class="comment">No diffusion contribution</span><br>
-<img src="/images/indent4.svg"><span class="comment">Done, continue face loop</span><br>
 </div>
 
 [fvm_post]: {% post_url 2024-02-08-transport-equation-fvm-unstructured-mesh %}
