@@ -33,7 +33,7 @@ Suppose that we are working with a 2D triangular mesh. In this mesh, an internal
 \(n \leftarrow\) number of cells<br>
 Zero-initialize matrix \(\textbf{A}_{n \times n}\) and vector \(\textbf{b}_{n \times 1}\)<br>
 For each cell \(i = 0 \rightarrow n-1\):<br>
-<img src="/images/indent.svg">For each of its faces \(k = 0 \rightarrow 3\):<br>
+<img src="/images/indent.svg">For each of its faces \(k = 0 \rightarrow 2\):<br>
 <img src="/images/indent2.svg">If it's an internal face:<br>
 <img src="/images/indent3.svg"><span class="comment">Determine the neighbor cell index</span><br>
 <img src="/images/indent3.svg">\(j \leftarrow\) cell neighbor index associated to face \(k\)<br>
