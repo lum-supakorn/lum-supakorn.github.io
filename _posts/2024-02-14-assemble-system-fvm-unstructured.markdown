@@ -29,7 +29,7 @@ which is the scalar transport equation written with a sum of fluxes in and out o
 Suppose that we are working with a 2D triangular mesh. In this mesh, an internal cell has exactly 3 neighbors. A boundary cell has at least one and at most two neighbor cells. We loop through the cell arrays and construct the equations cell-by-cell. The algorithm below assumes that $$\nabla \phi$$ is available. If it's not, we can first set it to zero. Also, the indices here are zero-based.
 
 <input type="checkbox" id="geom" onclick="show('geom')" checked>
-<label for="geom">Show geometry calculation</label>
+<label for="geom">Show geometry calculation</label><br>
 <input type="checkbox" id="gradient" onclick="show('gradient')" checked>
 <label for="gradient">Gradient is available</label>
 
@@ -38,7 +38,7 @@ Suppose that we are working with a 2D triangular mesh. In this mesh, an internal
 \(n \leftarrow\) number of cells<br>
 Zero-initialize matrix \(\textbf{A}_{n \times n}\) and vector \(\textbf{b}_{n \times 1}\)<br>
 For each cell \(i = 0 \rightarrow n-1\):<br>
-<img src="/images/indent.svg">For each of its faces \(k\):<br>
+<span class="indent-1">For each of its faces \(k\):</span><br>
 <div class="algo-box-group">
     <div class="algo-box indent-2">
     \(\textbf{r}_{k} \leftarrow\) the centroid of face \(k\)<br>
@@ -46,7 +46,7 @@ For each cell \(i = 0 \rightarrow n-1\):<br>
     \(\textbf{v}_k \leftarrow\) velocity at face midpoint<br>
     </div>
 </div>
-<img src="/images/indent2.svg">If it's an internal face:<br>
+<span class="indent-2">If it's an internal face:</span><br>
 <div class="algo-box-group">
     <div class="algo-box indent-3">
     <span class="comment">Determine the neighbor cell index</span><br>
@@ -84,15 +84,15 @@ For each cell \(i = 0 \rightarrow n-1\):<br>
     <span class="gradient"><br>\(\textbf{b}(i) \mathrel{+}= \Gamma S_k\{(\nabla \phi)_{\mathrm{N}_k} \cdot (\textbf{r}_{\mathrm{N}'_k} - \textbf{r}_{\mathrm{N}_k}) - (\nabla \phi)_{\mathrm{P}} \cdot (\textbf{r}_{\mathrm{P'}} - \textbf{r}_{\mathrm{P}})\}/|\textbf{r}_{\mathrm{N}'_k} - \textbf{r}_{\mathrm{P'}}|\)<br></span>
     </div>
 </div>
-<img src="/images/indent3.svg"><span class="comment">Done, continue face loop</span><br>
-<img src="/images/indent2.svg">If it's a boundary face:<br>
+<span class="indent-3"><span class="comment">Done, continue face loop</span></span><br>
+<span class="indent-2">If it's a boundary face:</span><br>
 <div class="algo-box-group">
     <div class="algo-box indent-3 geom">
     \(\textbf{S}_k \leftarrow\) the vector of face \(k\)<br>
     No flipping required since there is only the owner cell<br>
     </div>
 </div>
-<img src="/images/indent3.svg">If boundary condition type is Dirichlet:<br>
+<span class="indent-3">If boundary condition type is Dirichlet:</span><br>
 <div class="algo-box-group">
     <div class="algo-box indent-4">
     <span class="comment">Store convection contribution</span><br>
@@ -106,11 +106,11 @@ For each cell \(i = 0 \rightarrow n-1\):<br>
     <span class="comment">Store diffusion contribution</span><br>
     \(\textbf{A}(i,i) \mathrel{+}= \Gamma S_k/|\textbf{r}_k - \textbf{r}_{\mathrm{P'}}|\)<br>
     \(\textbf{b}(i) \mathrel{+}= \left\{\Gamma S_k/|\textbf{r}_k - \textbf{r}_{\mathrm{P'}}|\right\}\phi_k\)
-    <span class="gradient"><br><img src="/images/indent3.svg">\(- \Gamma S_k\{(\nabla \phi)_{\mathrm{P}} \cdot (\textbf{r}_{\mathrm{P'}} - \textbf{r}_{\mathrm{P}})\}/|\textbf{r}_k - \textbf{r}_{\mathrm{P'}}|\)</span>
+    <span class="gradient"><br><img src="/images/indent2.svg">\(- \Gamma S_k\{(\nabla \phi)_{\mathrm{P}} \cdot (\textbf{r}_{\mathrm{P'}} - \textbf{r}_{\mathrm{P}})\}/|\textbf{r}_k - \textbf{r}_{\mathrm{P'}}|\)</span>
     </div>
 </div>
-<img src="/images/indent4.svg"><span class="comment">Done, continue face loop</span><br>
-<img src="/images/indent3.svg">If boundary condition type is Neumann:<br>
+<span class="indent-4"><span class="comment">Done, continue face loop</span></span><br>
+<span class="indent-3">If boundary condition type is Neumann:</span><br>
 <div class="algo-box-group">
     <div class="algo-box indent-4">
     <span class="comment">Store convection contribution</span><br>

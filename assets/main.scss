@@ -24,6 +24,7 @@ img[alt=Lum] {
 	font-family: "Open Sans", sans-serif;
 	font-optical-sizing: auto;
 	font-style: normal;
+	overflow-x: auto;
 }
 
 .post-box.blue {
@@ -72,12 +73,28 @@ site-header {
 	font-family: "Open Sans", sans-serif;
 }
 
+span.indent-1 {
+	margin-left: 40px;
+}
+
+span.indent-2 {
+	margin-left: 80px;
+}
+
+span.indent-3 {
+	margin-left: 120px;
+}
+
+span.indent-4 {
+	margin-left: 160px;
+}
+
 .algo-box {
 	background-color: #e2ffe6;
     padding: 5px 12px;
     border-radius: 4px;
     border: solid 1px #b0dfb7;
-	margin-right: 0px
+	margin-right: 0px;
 }
 
 .algo-box.indent-2 {
@@ -97,4 +114,35 @@ site-header {
 	grid-row-gap: 10px;
 	margin-top: 4px;
 	margin-bottom: 4px;
+}
+
+@media only screen and (max-width: 600px) {
+	$base-indent: 12px;
+	.algo-box.indent-2 {
+		margin-left: $base-indent*2;
+	}
+	
+	.algo-box.indent-3 {
+		margin-left: $base-indent*3;
+	}
+	
+	.algo-box.indent-4 {
+		margin-left: $base-indent*4;
+	}
+
+	span.indent-1 {
+		margin-left: $base-indent;
+	}
+	
+	span.indent-2 {
+		margin-left: $base-indent*2;
+	}
+	
+	span.indent-3 {
+		margin-left: $base-indent*3;
+	}
+	
+	span.indent-4 {
+		margin-left: $base-indent*4;
+	}
 }
