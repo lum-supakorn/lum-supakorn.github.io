@@ -34,7 +34,7 @@ Suppose that we are working with a 2D triangular mesh. In this mesh, an internal
 <label for="gradient">Gradient is available</label>
 
 <div class="post-box green">
-<b>Assembly algorithm (full):</b><br>
+<b>Assembly algorithm:</b><br>
 \(n \leftarrow\) number of cells<br>
 Zero-initialize matrix \(\textbf{A}_{n \times n}\) and vector \(\textbf{b}_{n \times 1}\)<br>
 For each cell \(i = 0 \rightarrow n-1\):<br>
