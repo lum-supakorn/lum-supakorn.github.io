@@ -90,6 +90,7 @@ For each cell \(i = 0 \rightarrow n-1\):<br>
     <div class="algo-box indent-3 geom">
     \(\textbf{S}_k \leftarrow\) the vector of face \(k\)<br>
     No flipping required since there is only the owner cell<br>
+    \(\textbf{n} \leftarrow\) normalized \(\textbf{S}_k\)<br>
     </div>
 </div>
 <span class="indent-3">If boundary condition type is Dirichlet:</span><br>
