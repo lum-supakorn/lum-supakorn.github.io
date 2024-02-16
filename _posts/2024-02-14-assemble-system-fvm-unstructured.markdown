@@ -8,7 +8,7 @@ categories: cfd
 This note presents an algorithm for assembling the linear system that is a result of the discretization of the scalar transport equation on an unstructured mesh. I wrote this while researching the finite-volume method. The discretization process was discussed in the [previous post][fvm_post].
 
 ## Data Structures
-First, we need mesh information. The structures that hold this information is really simple. I store the nodes, the faces, and the cells (we will collectively call these *entities*) in their own arrays (`std::vector` in my case). They are also ordered because I need to access each entity by its index in the array.
+First, we need mesh information. The structures that hold this information is really simple. I store the nodes, the faces, and the cells (we will collectively call these *entities*) in their own arrays. They are also ordered because I need to access each entity by its index in the array.
 
 I am currently relying on [Gmsh][gmsh] to generate finite-volume mesh for me. Sadly, since Gmsh is a finite-element mesh generator, it does not support finite-volume mesh by default, so connectivity information which is important for finite-volume algorithms is not exported from the program. I wrote this [simple Python script][convert_gmsh_fvm] to extract this information from the original finite-element mesh file and store it in three files: `node`, `face`, and `cell`. I then just read these files and store the data in the three vectors.
 
