@@ -100,8 +100,8 @@ For each cell \(i = 0 \rightarrow n-1\):<br>
     \(\textbf{b}(i) \mathrel{+}= -\rho \phi_k \textbf{v}_k \cdot \textbf{S}_k\)<br>
     </div>
     <div class="algo-box indent-4 geom">
-    \(\textbf{r}_{\mathrm{P'}} \leftarrow \textbf{r}_k - \{(\textbf{r}_k - \textbf{r}_{\mathrm{P}}) \cdot \textbf{n}\}\textbf{n}\)<br>
     \(\textbf{n} \leftarrow\) normalized \(\textbf{S}_k\)<br>
+    \(\textbf{r}_{\mathrm{P'}} \leftarrow \textbf{r}_k - \{(\textbf{r}_k - \textbf{r}_{\mathrm{P}}) \cdot \textbf{n}\}\textbf{n}\)<br>
     </div>
     <div class="algo-box indent-4">
     <span class="comment">Store diffusion contribution</span><br>
