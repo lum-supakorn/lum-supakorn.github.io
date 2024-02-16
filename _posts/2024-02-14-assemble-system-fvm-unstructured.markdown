@@ -39,6 +39,13 @@ Suppose that we are working with a 2D triangular mesh. In this mesh, an internal
 Zero-initialize matrix \(\textbf{A}_{n \times n}\) and vector \(\textbf{b}_{n \times 1}\)<br>
 For each cell \(i = 0 \rightarrow n-1\):<br>
 <img src="/images/indent.svg">For each of its faces \(k\):<br>
+<div class="algo-box-group">
+    <div class="algo-box indent-2">
+    \(\textbf{r}_{k} \leftarrow\) the centroid of face \(k\)<br>
+    \(\textbf{r}_\mathrm{P} \leftarrow\) the centroid of cell \(i\)<br>
+    \(\textbf{v}_k \leftarrow\) velocity at face midpoint<br>
+    </div>
+</div>
 <img src="/images/indent2.svg">If it's an internal face:<br>
 <div class="algo-box-group">
     <div class="algo-box indent-3">
@@ -46,13 +53,9 @@ For each cell \(i = 0 \rightarrow n-1\):<br>
     \(j \leftarrow\) cell neighbor index associated to face \(k\)<br>
     </div>
     <div class="algo-box indent-3 geom">
-    <span class="comment">Compute geometrical variables for convection</span><br>
     \(\textbf{S}_k \leftarrow\) the vector of face \(k\)<br>
     If cell \(i\) is not the owner of face \(k\), flip \(\textbf{S}_k\)<br>
-    \(\textbf{v}_k \leftarrow\) velocity at face midpoint<br>
     Store \(\textbf{v}_k \cdot \textbf{S}_k\) to avoid repetitive computation<br>
-    \(\textbf{r}_{k} \leftarrow\) the centroid of face \(k\)<br>
-    \(\textbf{r}_\mathrm{P} \leftarrow\) the centroid of cell \(i\)<br>
     \(\textbf{r}_{\mathrm{N}_k} \leftarrow\) the centroid of cell \(j\)<br>
     \(\xi_k \leftarrow (\textbf{r}_k - \textbf{r}_{\mathrm{P}}) \cdot (\textbf{r}_{\mathrm{N}_k} - \textbf{r}_{\mathrm{P}})/|\textbf{r}_{\mathrm{N}_k} - \textbf{r}_{\mathrm{P}}|^2\)
     <span class="gradient"><br>\(\textbf{r}_{k'} \leftarrow (1-\xi_k)\textbf{r}_{\mathrm{P}} + \xi_k\textbf{r}_{\mathrm{N}_k}\)</span>
@@ -68,7 +71,6 @@ For each cell \(i = 0 \rightarrow n-1\):<br>
     <span class="gradient"><br>\(\textbf{b}(i) \mathrel{+}= -\rho(\textbf{v}_k \cdot \textbf{S}_k)(\nabla \phi)_{k'} \cdot (\textbf{r}_k-\textbf{r}_{k'})\)</span><br>
     </div>
     <div class="algo-box indent-3 geom">
-    <span class="comment">Compute geometrical variables for diffusion</span><br>
     \(\textbf{n} \leftarrow\) normalized \(\textbf{S}_k\)<br>
     \(\beta \leftarrow \mathrm{min}\left((\textbf{r}_k - \textbf{r}_{\mathrm{P}}) \cdot \textbf{n}, (\textbf{r}_{\mathrm{N}_k} - \textbf{r}_k) \cdot \textbf{n}\right)\)<br>
     \(\textbf{r}_{\mathrm{P'}} \leftarrow \textbf{r}_k - \beta\textbf{n}\)<br>
@@ -88,19 +90,17 @@ For each cell \(i = 0 \rightarrow n-1\):<br>
     <div class="algo-box indent-3 geom">
     \(\textbf{S}_k \leftarrow\) the vector of face \(k\)<br>
     No flipping required since there is only the owner cell<br>
-    \(\textbf{v}_k \leftarrow\) velocity at face midpoint<br>
     </div>
 </div>
 <img src="/images/indent3.svg">If boundary condition type is Dirichlet:<br>
 <div class="algo-box-group">
-    <div class="algo-box indent-4 geom">
-    \(\textbf{r}_{k} \leftarrow\) the centroid of face \(k\)<br>
-    \(\textbf{r}_\mathrm{P} \leftarrow\) the centroid of cell \(i\)<br>
-    </div>
     <div class="algo-box indent-4">
     <span class="comment">Store convection contribution</span><br>
     \(\phi_k \leftarrow\) scalar value from boundary condition<br>
     \(\textbf{b}(i) \mathrel{+}= -\rho \phi_k \textbf{v}_k \cdot \textbf{S}_k\)<br>
+    </div>
+    <div class="algo-box indent-4 geom">
+    \(\textbf{r}_{\mathrm{P'}} \leftarrow \textbf{r}_k - \{(\textbf{r}_k - \textbf{r}_{\mathrm{P}}) \cdot \textbf{n}\}\textbf{n}\)
     </div>
     <div class="algo-box indent-4">
     <span class="comment">Store diffusion contribution</span><br>
