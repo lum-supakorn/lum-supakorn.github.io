@@ -54,8 +54,8 @@ For each cell \(i = 0 \rightarrow n-1\):<br>
     \(\textbf{r}_{k} \leftarrow\) the centroid of face \(k\)<br>
     \(\textbf{r}_\mathrm{P} \leftarrow\) the centroid of cell \(i\)<br>
     \(\textbf{r}_{\mathrm{N}_k} \leftarrow\) the centroid of cell \(j\)<br>
-    \(\xi_k \leftarrow (\textbf{r}_k - \textbf{r}_{\mathrm{P}}) \cdot (\textbf{r}_{\mathrm{N}_k} - \textbf{r}_{\mathrm{P}})/|\textbf{r}_{\mathrm{N}_k} - \textbf{r}_{\mathrm{P}}|^2\)<br>
-    \(\textbf{r}_{k'} \leftarrow (1-\xi_k)\textbf{r}_{\mathrm{P}} + \xi_k\textbf{r}_{\mathrm{N}_k}\)
+    \(\xi_k \leftarrow (\textbf{r}_k - \textbf{r}_{\mathrm{P}}) \cdot (\textbf{r}_{\mathrm{N}_k} - \textbf{r}_{\mathrm{P}})/|\textbf{r}_{\mathrm{N}_k} - \textbf{r}_{\mathrm{P}}|^2\)
+    <span class="gradient"><br>\(\textbf{r}_{k'} \leftarrow (1-\xi_k)\textbf{r}_{\mathrm{P}} + \xi_k\textbf{r}_{\mathrm{N}_k}\)</span>
     </div>
     <div class="algo-box indent-3 gradient">
     <span class="comment">Interpolate gradients</span><br>
