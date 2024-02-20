@@ -2,7 +2,7 @@
 layout: post
 title:  "A Reminder That Physics is a Model"
 date:   2024-02-19 12:30:00 +0700
-categories: cfd
+categories: physics
 ---
 
 Among the ideas that influence my thinking as an engineer the most is the notion that *physics is a model*.
