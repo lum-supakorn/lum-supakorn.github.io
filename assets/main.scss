@@ -146,6 +146,11 @@ span.indent-4 {
 	span.indent-4 {
 		margin-left: $base-indent*4;
 	}
+
+	canvas#c {
+		width: 100%;
+		border: solid 1px #DDD;
+	}
 }
 
 span.todo {
