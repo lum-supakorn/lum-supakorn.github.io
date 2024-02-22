@@ -45,10 +45,9 @@ $$
 x_{k,i} = \frac{b_i - \sum_{\substack{j=1\\j\neq i}}^{n}a_{ij} x_{k-1,j}}{a_{ii}}
 $$
 
-Now this starts to look like the Gauss-Seidel algorithm that I was taught. I implemented this on a 2-by-2 linear system to visualize the search:
+Now this starts to look like the Gauss-Seidel algorithm that I was taught. The visualization below illustrates the search process for a 2-by-2 linear system. The first red dot is the initial guess. The blue dot is the true solution. The slider at the bottom of the page controls the iteration.
 
-![Gauss-Seidel Projection Search](/images/gauss-seidel-projection/gs-1.png)
-
-And of course more iterations yield a more accurate result:
-
-![Gauss-Seidel Projection Search](/images/gauss-seidel-projection/gs-2.png)
+<canvas id="c" width=740 height=500></canvas>
+Iteration <span id="iter-value">0</span>:<br>
+<input type="range" min="0" max="10" value="0" step="1" id="iter">
+<script src="/scripts/gs.js"></script>

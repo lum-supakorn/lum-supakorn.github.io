@@ -163,3 +163,11 @@ p:has(span.center) {
 p {
 	text-align: justify;
 }
+
+input[type="range"] {
+	width: 100%;
+}
+
+canvas#c {
+	border: solid 1px #DDD;
+}
