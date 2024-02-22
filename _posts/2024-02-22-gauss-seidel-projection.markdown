@@ -29,8 +29,7 @@ a_{11} \\
 a_{12} \\
 \vdots \\
 a_{1n}
-\end{bmatrix} &= b_1 \\
-a_{11} x_{1,1} + a_{12} x_{1,2} + \dots + a_{1n} x_{1,n} &= b_1
+\end{bmatrix} &= b_1
 \end{aligned}
 $$
 
