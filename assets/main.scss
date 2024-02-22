@@ -5,6 +5,7 @@
 @import "minima";
 
 .katex-html {
+	padding-top: 1px;
 	overflow-x: auto;
     overflow-y: hidden;
 }
@@ -145,4 +146,20 @@ span.indent-4 {
 	span.indent-4 {
 		margin-left: $base-indent*4;
 	}
+}
+
+span.todo {
+	color: red;
+}
+
+blockquote {
+	letter-spacing: 0px;
+}
+
+p:has(span.center) {
+	text-align: center;
+}
+
+p {
+	text-align: justify;
 }
