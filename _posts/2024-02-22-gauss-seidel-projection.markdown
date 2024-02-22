@@ -48,12 +48,8 @@ $$
 
 Now this starts to look like the Gauss-Seidel algorithm that I was taught. I implemented this on a 2-by-2 linear system to visualize the search:
 
-|![Gauss-Seidel Projection Search](/images/gauss-seidel-projection/gs-1.png)
-|:--:| 
-| Search paths for Gauss-Seidel |
+![Gauss-Seidel Projection Search](/images/gauss-seidel-projection/gs-1.png)
 
 And of course more iterations yield a more accurate result:
 
-|![Gauss-Seidel Projection Search](/images/gauss-seidel-projection/gs-2.png)
-|:--:| 
-| Search paths for Gauss-Seidel with more iterations |
+![Gauss-Seidel Projection Search](/images/gauss-seidel-projection/gs-2.png)
