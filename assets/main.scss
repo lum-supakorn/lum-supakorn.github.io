@@ -171,6 +171,7 @@ p:has(span.center) {
 
 p {
 	text-align: justify;
+	hyphens: auto;
 }
 
 input[type="range"] {
