@@ -9,7 +9,7 @@ Among the ideas that influence my thinking as an engineer the most is the notion
 
 For some people with proper training this might sound obvious, but to me it wasn't. And once I realized this, it changed the way I work for the better.
 
-Throughout my life I was taught that physics is *the* law. While this might be true is some sense, it led me and many students to think that to study anything we just need to look up the relevant set of laws, do some maths, and report the result. This line of thought has caused some serious issues in engineering. The notion that everything obeys the law prevented us from questioning the law in the first place. Somebody discovered such and such laws and this is how the universe works. End of story.
+Throughout my life I was taught that physics is *the* law. While this might be true is some sense, it led me and many students to think that to study anything we just need to look up the relevant set of laws, do some maths, and report the result. This line of thought has caused some serious issues in engineering. The notion that everything obeys the law prevented us from questioning the law in the first place (*breaking the laws of physics* often conveys the same meaning as *impossible*). Somebody discovered such and such laws and this is how the universe works. End of story.
 
 In fact, physics is not how the universe works at all. We do *not* actually know how the universe works because so far no-one has ever told us how it works. Imagine watching a basketball game for the first time without being told the rules of the sport. After watching several games and attentively recording their observation, one might be able to deduce the set of rules that they think govern the game.
 
