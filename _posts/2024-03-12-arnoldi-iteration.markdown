@@ -7,7 +7,7 @@ categories: numerics
 
 This note is based on problem 34.2 of Lloyd N. Trefethen and David Bau III's [Numerical Linear Algebra](https://www.amazon.com/Numerical-Linear-Algebra-Lloyd-Trefethen/dp/0898713617).
 
-Let matrix $$A$$ be an $$N \times N$$ diagonal matrix with elements $$a_{k,k} = a_{k,k+1} = k^{-1/2}$$. I would like to see its $$\epsilon$$-pseudospectra or the "almost eigenvalues" and compare them to the actual eigenvalues. These are the eigenvalues of $$A+E$$ instead of $$A$$ where the 2-norm of $$E$$ does not exceed a specified $$\epsilon$$. An eigenvalue plot on the complex plane with several $$\epsilon$$'s and $$N=64$$ is shown below.
+Let matrix $$A$$ be an $$N \times N$$ bidiagonal matrix with elements $$a_{k,k} = a_{k,k+1} = k^{-1/2}$$. I would like to see its $$\epsilon$$-pseudospectra or the "almost eigenvalues" and compare them to the actual eigenvalues. These are the eigenvalues of $$A+E$$ instead of $$A$$ where the 2-norm of $$E$$ does not exceed a specified $$\epsilon$$. An eigenvalue plot on the complex plane with several $$\epsilon$$'s and $$N=64$$ is shown below.
 
 ![](/images/arnoldi-iteration/pseudospectra.png)
 
