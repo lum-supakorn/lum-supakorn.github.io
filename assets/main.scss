@@ -6,6 +6,7 @@
 
 .katex-html {
 	padding-top: 1px;
+	padding-bottom: 1px;
 	overflow-x: auto;
     overflow-y: hidden;
 }
@@ -40,6 +41,8 @@ img[alt=Lum] {
 
 .post-title {
 	line-height: 1.2;
+	font-size: 2em;
+	letter-spacing: 0px;
 }
 
 .site-header {
@@ -188,4 +191,14 @@ footer-col p {
 
 .post-link {
 	font-size: 20px;
+}
+
+.post-content h2 {
+	font-size: 1.6em;
+	margin-top: 1.6em;
+}
+
+.post-content h1 {
+	font-size: 1.4em;
+	margin-top: 1.4em;
 }
