@@ -15,7 +15,7 @@ $$
 
 This means that the magnetic field is always divergence-free or *solenoidal*. Physically, this says that there is no *magnetic monopole*, because otherwise it would be a source or a sink of the magnetic field and the divergence would not be zero. Fair enough, but can we prove this with mathematics?
 
-Griffith's electrodynamics book explained this mathematically and it goes like this. Starting with the Biot-Savart law which describes the magnetic field of a steady current. Let's model this with some medium with volume current density:
+Griffith's electrodynamics book explained this mathematically. It starts with the Biot-Savart law which describes the magnetic field induced by some medium with a steady volume current density:
 
 $$
 \textbf{B}(\textbf{r}) = \frac{\mu_0}{4\pi}\int_V{\frac{\textbf{J}\times\textbf{r}'}{|\textbf{r}'|^3}\mathrm{d}V}
