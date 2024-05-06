@@ -15,7 +15,7 @@ $$
 
 This means that the magnetic field is always divergence-free or *solenoidal*. Physically, this says that there is no *magnetic monopole*, because otherwise it would be a source or a sink of the magnetic field and the divergence would not be zero. Fair enough, but can we prove this with mathematics?
 
-Griffith's electrodynamics book explained this mathematically. It starts with the Biot-Savart law which describes the magnetic field induced by some medium with a steady volume current density:
+Griffiths' electrodynamics book explained this mathematically. It starts with the Biot-Savart law which describes the magnetic field induced by some medium with a steady volume current density:
 
 $$
 \textbf{B}(\textbf{r}) = \frac{\mu_0}{4\pi}\int_V{\frac{\textbf{J}\times\textbf{r}'}{|\textbf{r}'|^3}\mathrm{d}V}
@@ -41,7 +41,7 @@ $$
 \end{equation}
 $$
 
-Griffith says that the first term is zero because $$\textbf{J}$$ only depends on the *primed* variables and invites us to solve Problem 1.63 to see that the second term is also zero (I will investigate this later). I am not satisfied with this explanation. What are *primed* and *unprimed* variables in the context of calculus? Does $$\textbf{J}$$ not vary in space throughout the medium so the spatial derivative of $$\textbf{J}$$ is non-zero? It seems like [a few people were confused too](https://www.reddit.com/r/AskPhysics/comments/gmke92/difference_between_primed_and_unprimed_variables/). This is what I would like to investigate.
+Griffiths says that the first term is zero because $$\textbf{J}$$ only depends on the *primed* variables and invites us to solve Problem 1.63 to see that the second term is also zero (I will investigate this later). I am not satisfied with this explanation. What are *primed* and *unprimed* variables in the context of calculus? Does $$\textbf{J}$$ not vary in space throughout the medium so the spatial derivative of $$\textbf{J}$$ is non-zero? It seems like [a few people were confused too](https://www.reddit.com/r/AskPhysics/comments/gmke92/difference_between_primed_and_unprimed_variables/). This is what I would like to investigate.
 
 ### Derivative of Definite Integral
 
